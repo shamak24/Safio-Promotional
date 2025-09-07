@@ -1,1 +1,57 @@
 @import 'tailwindcss';
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Prevent blue highlight on mobile taps */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* minimal focus styles for accessibility */
+:focus {
+  outline: 3px solid rgba(155,17,30,0.25);
+  outline-offset: 2px;
+}
+
+/* Safio brand colors */
+:root { 
+  --bg-black: #000000;
+  --safio-red: #FF4B4B;
+}
+
+/* small helper for glass effect */
+.glass {
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Custom Safio Red background utility */
+.bg-safioRed {
+  background-color: var(--safio-red) !important;
+}
+
+/* Custom neon red shadow utility */
+.shadow-neon-red {
+  box-shadow: 0 0 16px 2px rgba(255,75,75,0.6), 0 2px 8px 0 rgba(0,0,0,0.1);
+}
+
+/* GSAP Animations - prevent flash of unstyled content */
+.hero-title,
+.hero-sub,
+.hero-ctas,
+.feature-card {
+  opacity: 0;
+}
+
+/* Custom button hover effects */
+.hover\:brightness-110:hover {
+  filter: brightness(1.1);
+}
